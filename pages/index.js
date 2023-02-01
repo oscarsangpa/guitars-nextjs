@@ -7,10 +7,6 @@ export default function Home() {
       title="Home">
 
     <h1>First Steps Next.js!</h1>
-    <Link href="/about-us">About Us</Link>
-    <Link href="/blog">Blog</Link>
-    <Link href="/cart">Cart</Link>
-    
     </Layout>
   )
 }
