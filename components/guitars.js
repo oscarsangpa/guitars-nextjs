@@ -22,4 +22,5 @@ const Guitars = ( { guitar } ) => {
   )
 }
 
-export default Guitars
+export default Guitars;
+
