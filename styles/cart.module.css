@@ -1,0 +1,22 @@
+.contain {
+    display: grid;
+    align-items: flex-start;
+    gap: 5rem;
+}
+
+@media (min-width:768px) {
+    .contain {
+        grid-template-columns: 3fr 2fr;
+    }
+}
+
+.cart {
+    padding: 3rem;
+}
+
+.resume {
+    background-color: #f9fafb;
+    padding: 3rem;
+    border-radius: 1rem;
+    
+}

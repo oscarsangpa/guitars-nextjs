@@ -30,6 +30,10 @@ const Header = () => {
                 <Link href="/blog" className={ pathname === "/blog" ? styles.active : ""}>
                     Blog
                 </Link>
+
+                <Link href="/cart">
+                    <Image src="/img/cart.png" width={30} height={25} alt="cart icon"/>
+                </Link>
             
         </nav>
         </div>
