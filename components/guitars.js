@@ -5,12 +5,12 @@ import styles from "../styles/guitars.module.css"
 const Guitars = ( { guitar } ) => {
 
   const {name, description, price, url, image } = guitar;
-  // const { imageGuitar } = image.data.attributes.formats.medium.url
+  const guitarImage = image.data.attributes.formats.medium.url
 
   
   return (
     <div className={styles.guitar}>
-      <Image src={image.data.attributes.formats.medium.url} width={600} height={400} alt={`guitar ${name} image`}/>
+      <Image src={guitarImage} width={600} height={400} alt={`guitar ${name} image`}/>
 
       <div className={styles.contain}>
         <p>{name}</p>
