@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "../../styles/guitars.module.css"
 import Layout from "../../components/layout";
 
-const Product = ({guitar}) => {
+export default function GuitarProduct ({guitar}) {
 
   const {name, description, image, price} = guitar[0].attributes
 
@@ -24,7 +24,6 @@ const Product = ({guitar}) => {
   )
 }
 
-export default Product;
 
 export async function getStaticPaths() {
 

@@ -3,7 +3,7 @@ import Link from "next/link"
 import {formatDate} from "../utils/helpers"
 import styles from "../styles/blog.module.css"
 
-const Post = ({post}) => {
+const Posts = ({post}) => {
 
     const { title, image, url, contain, publishedAt} = post
     const postImage = image.data.attributes.formats.medium.url
@@ -17,7 +17,7 @@ const Post = ({post}) => {
             <h3>{title}</h3>
             <p className={styles.date}>{formatDate(publishedAt)}</p>
             <p className={styles.resume}>{contain}</p>
-            <Link className={styles.link} href={`/blog/${url}`}>
+            <Link className={styles.link} href={`/posts/${url}`}>
                 Read Post
             </Link>
         </div>
@@ -25,4 +25,4 @@ const Post = ({post}) => {
   )
 }
 
-export default Post
+export default Posts

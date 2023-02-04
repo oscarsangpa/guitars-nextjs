@@ -1,10 +1,10 @@
 import React from 'react'
 import Layout from '../components/layout'
-import Post from '../components/posts'
+import Posts from '../components/posts'
 import styles from "../styles/grid.module.css"
 
 
-function Blog({posts}) {
+export default function Blog({posts}) {
   
   return (
     <Layout title="Blog">
@@ -13,7 +13,7 @@ function Blog({posts}) {
 
         <div className={styles.grid}>
         {posts?.map(post => (
-          <Post
+          <Posts
             key={post.id}
             post={post.attributes}
           />
@@ -24,8 +24,6 @@ function Blog({posts}) {
     </Layout>
   )
 }
-
-export default Blog
 
 export async function getStaticProps() {
   const response = await fetch(`${process.env.API_URL}/posts?populate=image`)

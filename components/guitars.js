@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/guitars.module.css"
 
-const Guitars = ( { guitar } ) => {
+export default function Guitars( { guitar } ){
 
   const {name, description, price, url, image } = guitar;
   const guitarImage = image.data.attributes.formats.medium.url
@@ -22,5 +22,5 @@ const Guitars = ( { guitar } ) => {
   )
 }
 
-export default Guitars;
+
 
