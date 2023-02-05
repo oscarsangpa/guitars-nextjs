@@ -1,7 +1,7 @@
-import Image from "next/image";
-import styles from "../../styles/guitars.module.css"
-import Layout from "../../components/layout";
 import { useState } from "react";
+import Image from "next/image";
+import Layout from "../../components/layout";
+import styles from "../../styles/guitars.module.css"
 
 export default function GuitarProduct({ guitar, addToCart }) {
 
