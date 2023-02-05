@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }) {
   }
 
   const updateAmount = guitar => {
-    const updateCart = carrt.map(guitarState => {
+    const updateCart = cart.map(guitarState => {
       if (guitarState.id === guitar.id) {
         guitarState.amount = parseInt(guitar.amount)
       }
