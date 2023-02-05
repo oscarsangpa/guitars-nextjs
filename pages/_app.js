@@ -1,10 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../styles/globals.css';
 
 
 function MyApp({ Component, pageProps }) {
+  
+  const cartLS = typeof window !== "undefined" ? JSON.parse(localStorage.getItem("cart")) ?? [] : []
+  const [cart, setCart] = useState(cartLS)
 
-  const [cart, setCart] = useState([])
+  useEffect( ()=> {
+    localStorage.setItem("cart", JSON.stringify(cart))
+  }, [cart])
 
 
   const addToCart = guitar => {
